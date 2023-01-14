@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+    --main-border-radius: 7px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+    background: linear-gradient(#4e4e4ed5, #0f0f0f );
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app-wrapper {
+    background-color: #fed866e3;
+    min-width: 450px;
+    min-height: 95vh;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 5px 7px 20px rgba(0, 0, 0, 0.397);
+    margin: 10px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.header h1 {
+    color: #fff;
+    text-align: center;
+    margin: 30px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task-input {
+    outline: none;
+    width: 260px;
+    padding: 12px;
+    margin-right: 25px;
+    font-size: 16px;
+    color: #ccc;
+    background-color: #000000;
+    border: 0.5px solid #c89666;
+    border-radius: var(--main-border-radius);
+}
+
+.button-add {
+    width: auto;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: var(--main-border-radius);
+    border: 0.4px solid #f7ab65;
+    background-color: #f1af71;
+    cursor: pointer;
+}
+
+.list-item {
+    display: flex;
+    margin: 20px 0;
+    border: 1px solid #000000;
+    border-radius: var(--main-border-radius);
+    padding: 10px;
+    max-height: 30px;
+    background-color: #12343b;
+}
+
+.list {
+    width: 250px;
+    background-color: transparent;
+    border: none;
+    color: #ccc;
+    font-size: 16px;
+    padding-left: 10px;
+    margin-right: 15px;
+}
+
+.button-complete,
+.button-delete,
+.button-edit {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 28px;
+    border-radius: 50%;
+}
+
+.button-complete {
+    color: #ff6c6c;
+    margin-right: 10px;
+}
+
+.button-edit {
+    color: #e2d029;
+    margin-right: 10px;
+}
+
+.complete {
+    text-decoration-style: solid;
+    text-decoration-line: line-through;
+    text-decoration-color: #ff6c6c;
+    opacity: 0.6;
+}
+
+
+input:focus,
+button:focus {
+    outline: none;
+}
+
+.center-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+    padding-left: 0;
 }
