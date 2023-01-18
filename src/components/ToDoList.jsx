@@ -50,7 +50,7 @@ export const Tasks = ({ tasks, setTasks, setEditTask }) => {
             <input
               type="text"
               value={task.title}
-              className="list"
+              className={`list ${task.completed ? "complete" : ""}`}
               onChange={(e) => e.preventDefault()}>
             </input>
 
